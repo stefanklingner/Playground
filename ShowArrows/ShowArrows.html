@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+    <title>ShowArrows</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/showarrows.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <script type="text/javascript" src="./js/angular.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+
+</head>
+
+<script type="text/javascript">
+
+    function removeArrowClasses() {
+        $('#arrowBox > div').removeClass('arrowNorth arrowEast arrowSouth arrowWest long high');
+    }
+
+    $(function () {
+        $('.btn').hover(function () {
+            var id = this.id;
+            switch (id) {
+                case "north":
+                    removeArrowClasses();
+                    $('#arrowBox > div ').addClass('arrowNorth high');
+                    break;
+                case "east":
+                    removeArrowClasses();
+                    $('#arrowBox > div').addClass('arrowEast long');
+                    break;
+                case "south":
+                    removeArrowClasses();
+                    $('#arrowBox > div').addClass('arrowSouth high');
+                    break;
+                case "west":
+                    removeArrowClasses();
+                    $('#arrowBox > div').addClass('arrowWest long');
+                    break;
+                default :
+                    removeArrowClasses();
+                    break;
+            }
+            ;
+        });
+    });
+
+
+</script>
+
+<body>
+
+<div class="well row">
+
+    <div class="span4 offset2">
+        <button id="north" class="btn">North</button>
+        <button id="east" class="btn">East</button>
+        <button id="south" class="btn">South</button>
+        <button id="west" class="btn">West</button>
+    </div>
+</div>
+
+<div class="row">
+        <div id="arrowBox" class="span4 offset2">
+            <div>
+
+            </div>
+        </div>
+
+</div>
+</body>
+
+
+</html>

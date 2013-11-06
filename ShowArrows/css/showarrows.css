@@ -1,0 +1,35 @@
+
+#arrowBox > div.long {
+    width: 60px;
+    height: 19px;
+}
+
+#arrowBox > div.high {
+    width: 19px;
+    height: 60px;
+}
+
+.arrowNorth,
+.arrowEast,
+.arrowSouth,
+.arrowWest {
+    background-image:  url("../img/pfeile.png");
+    background-repeat: no-repeat;
+}
+
+.arrowNorth {
+    background-position: -77px 0;
+}
+
+.arrowEast {
+    background: url("../img/pfeile.png") no-repeat 0 0;
+}
+
+.arrowWest {
+    background: url("../img/pfeile.png") no-repeat 0 -40px;
+}
+
+.arrowSouth {
+    background: url("../img/pfeile.png") no-repeat -110px 0;
+}
+
